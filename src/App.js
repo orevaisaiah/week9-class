@@ -1,5 +1,8 @@
 import "./App.css";
-import Form from './components/Form'
+import Form from './components/Form';
+import { Switch, Route, NavLink, useParams} from "react-router-dom";
+import Product from './components/Product';
+
 
 function App() {
   return (
@@ -26,6 +29,13 @@ function App() {
      */}
 
      <Form/>
+
+
+     <NavLink to="/product">Product</NavLink>
+     <Route path="/product/:id">
+        <Product />
+     </Route>
+
     </div>
   );
 }
